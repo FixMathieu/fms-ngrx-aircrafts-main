@@ -6,5 +6,10 @@
       {"id": 4,"prog": "A400M","design": false,"development": false},
       {"id": 5,"prog": "A330","design": true,"development": true}
     ]
+    ,
+    "users":[
+      {"email": "current@user.fms", "password":"1234"},
+      {"email": "cur@user.fms", "password":"4321"}
+    ]
   }
   

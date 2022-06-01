@@ -13,8 +13,9 @@ export class AircraftService {
   //liste de tous les avions en base => une fois sur 2 on souhaite provoquer une erreur
   //méthode renvoi un objet de type Observable contenant une liste d'avions sous la forme d'un tableau
   public getAircrafts():Observable<Aircraft[]> {
-    let host = Math.random() > 0.1 ? environment.host : environment.unreachableHost;
-    return this.http.get<Aircraft[]>(host+"/aircrafts");
+    // let host = Math.random() > 0.1 ? environment.host : environment.unreachableHost;
+    
+    return this.http.get<Aircraft[]>(environment.host+"/aircrafts");
   //précisons dans la méthode get que nous attendons une liste d'avions      
   }
 
