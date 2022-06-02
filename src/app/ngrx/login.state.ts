@@ -15,7 +15,7 @@ export interface LoginState {    //structure de notre STATE
 }
 //il est nécessaire de définir l'état initial du state avec des valeurs par défaut
 export const initState : LoginState = {
-    authUser : { "email": "cur@user.fms", "password":"4321"},
+    authUser : { "email": "", "password":""},
     errorMessage:"",
     dataState : LoginStateEnum.INITIAL
 }

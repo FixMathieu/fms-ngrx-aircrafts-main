@@ -30,4 +30,5 @@ export class AircraftsNavbarComponent implements OnInit {
     this.store.dispatch(new SearchAircraftsAction(value.keyword));
     //on transmet le mot clé du formulaire
   }
+  getLoggedUser(){}
 }
