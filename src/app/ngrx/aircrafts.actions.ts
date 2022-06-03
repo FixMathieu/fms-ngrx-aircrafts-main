@@ -50,11 +50,14 @@ export class GetAllAircraftsActionError implements Action{
 export class GetDesignedAircraftsAction implements Action {
     type: AircraftsActionsTypes = AircraftsActionsTypes.GET_DESIGNED_AIRCRAFTS;
     constructor(public payload:any) {   
+ 
     }
 }
 export class GetDesignedAircraftsActionSuccess implements Action {
     type: AircraftsActionsTypes = AircraftsActionsTypes.GET_DESIGNED_AIRCRAFTS_SUCCESS;
     constructor(public payload:Aircraft[]) {
+        console.log(payload);
+        
     }
 }
 export class GetDesignedAircraftsActionError implements Action {

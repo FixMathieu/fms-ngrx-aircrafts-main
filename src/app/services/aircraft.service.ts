@@ -7,6 +7,7 @@ import { Aircraft } from '../model/aircraft.model';
 @Injectable({providedIn: 'root'})  //Service + accessible dans toute l'appli
 
 export class AircraftService {
+  flagLine:boolean= false;
 
   constructor(private http:HttpClient) { }
 
@@ -40,5 +41,12 @@ export class AircraftService {
   //renvoi la liste d'avions contenant le mot clé
   public searchAircrafts(keyword:string) : Observable<Aircraft[]> {
     return this.http.get<Aircraft[]>(environment.host + "/aircrafts?prog_like=" + keyword)
+  }
+  //permet d'afficher le bouton supllémentaire sur 'design'
+  public getFLagLine(){
+    return this.flagLine;
+  }
+  public setFlagLine(flag : boolean){
+    this.flagLine=flag;
   }
 }
